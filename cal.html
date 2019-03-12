@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cal</title>
+</head>
+<body>
+	<center><h1 style="color:red;"><b>online calculator including currency conversion</b></center>
+
+		<form name="cal">
+			<table border="10px" cellspacing="10px">
+
+				<tr> <td colspan="5>"><center><h3>calculator</h3></center></td></tr>
+
+				<tr>
+					<td colspan="5">
+						<input type="text" name="x" onkeydown="func()">
+						<script>
+							function func(){
+								alert("you pressed a key inside the field");
+							}
+						</script>
+					</td>
+				</tr>
+
+			<tr>
+				<th><input type="button" id="btn" value="1" onclick="cal.x.value+='1'"></th>
+					<th><input type="button" id="btn" value="2" onclick="cal.x.value+='2'"></th>
+						<th><input type="button" id="btn" value="3" onclick="cal.x.value+='3'"></th>
+							<th><input type="button" id="btn" value="+" onclick="cal.x.value+='+'"></th>
+								<th><input type="button" id="btn" value="-" onclick="cal.x.value+='-'"></th>
+			</tr>
+
+
+			<tr>
+				<th><input type="button" id="btn" value="4" onclick="cal.x.value+='4'"></th>
+					<th><input type="button" id="btn" value="5" onclick="cal.x.value+='5'"></th>
+						<th><input type="button" id="btn" value="6" onclick="cal.x.value+='6'"></th>
+							<th><input type="button" id="btn" value="/" onclick="cal.x.value+='/'"></th>
+								<th><input type="button" id="btn" value="*" onclick="cal.x.value+='*'"></th>
+			</tr>
+
+
+			<tr>
+				<th><input type="button" id="btn" value="7" onclick="cal.x.value+='7'"></th>
+					<th><input type="button" id="btn" value="8" onclick="cal.x.value+='8'"></th>
+						<th><input type="button" id="btn" value="9" onclick="cal.x.value+='9'"></th>
+							<th><input type="button" id="btn" value="%" onclick="cal.x.value+='%'"></th>
+								<th><input type="button" id="btn" value="*2" onclick="cal.x.value=Math.pow(cal.x.value,2)"></th>
+			</tr>
+
+			<tr>
+				<th><input type=button id="btn" value="0" onclick="cal.x.value+='0'"></th>
+				<th> <input type="button" id="btn" value="=" onclick="cal.x.value=eval(cal.x.value)"></th>
+<th> <input type="button" id="btn" value="c" onclick="cal.x.value=''"></th>
+
+<tr>
+	<td colspan="5"><center><h4>currency conversion</h4></center></td></tr>
+
+	<tr>
+		<th> <input id="btn" type="button" name="USD-RS" value="USD-RS" onclick="cal.x.value=eval(cal.x.value*63.9105)"></th>
+
+		
+		<td colspan="2"><input id="btn" type="button"  value="RS-USD" onclick="cal.x.value=eval(cal.x.value*0.01565)"></td></tr>
+</tr>
+</table>
+</form>
+</center>
+</body>
+</html>

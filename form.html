@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form valid</title>
+</head>
+<body>
+<center><h1 style="color:orange;">welcome to sign up page</h1>
+
+	<br>
+
+	<form name="a">
+		<div>
+			FirstName:<input type="text" name="fn"></div>
+		<br>
+
+		<div>
+			LastName:<input type="text" name="ln"></div>
+		<br>
+
+		<div>
+			DOB:<select name="date">
+				<option>1</option>
+				<option>2</option>
+			</select>
+			<select name="mont">
+				<option>jan</option>
+				<option>feb</option>
+			</select>
+			<select name="year">
+				<option>1990</option>
+				<option>2012</option>
+			</select>
+		</div>
+		<br>
+		<div>
+			MOB:<input type="text" name="mno"></div>
+		<br>
+		<div>
+			email:<input type="text" name="em"></div>
+		<br>
+
+		<div><input type="button" value="submit" onclick="fu()"></button></div>
+	</form>
+
+<script >
+	function fu()
+	{
+		var x= document.forms["a"]["fn"].value;
+		if(x=="")
+		{
+			alert("fill the first name");
+			return false;
+		}
+		if(!/^[A-Za-z]+$/.test(x))
+			{
+				alert("first name should have only alphabets");
+			}
+
+		var l=document.forms["a"]["ln"].value;
+		if(l=="")
+		{
+			alert("enter last name");
+			return false;
+		}
+		if(!/^[A-Za-z]+$/.test(l))
+		{
+			alert("lastname should have only alphabets");
+			return false;
+		}
+
+		var m=document.forms["a"]["mno"].value;
+		if(document.a.mno.value=="")
+		{
+			alert("enter mobile number");
+		}
+		if(!/^[0-9]+$/.test(document.a.mno.value))
+		{
+			alert("enter only nos");
+		}
+
+		var e=document.forms["a"]["em"].value;
+		if(e=="")
+		{
+			alert("enter email");
+		}
+		var ate=e.indexOf("@");
+		var dos=e.lastIndexOf(".");
+
+if(ate<1||dos<ate+2||dos+2>=e.length)
+{
+	alert("enter proper email id");
+	return false;
+}
+
+alert("submitted");
+	}
+
+</script>
+
+
+</center>
+</body>
+</html>

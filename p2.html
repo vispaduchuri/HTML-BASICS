@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>word line</title>
+</head>
+<body>
+<h1 style="color:blue;margin-left: 180px;"><b>COUNT NO OF WORDS, LINES and CHARACTERS </b></h1>
+<textarea style="margin-left:180px"; id="t" rows="4" cols="50" placeholder="write here";></textarea>
+
+<input type="button" value="submit" onclick="myfun()">
+
+<script >
+	
+	function myfun()
+	{
+		var text=document.getElementById("t").value;
+		var nc=text.length-(text.split(/\n+/).length-1);
+		var nw=text.split(/\s+/).length;
+		var nl=text.split(/\n+/).length;
+		alert("no of char"+ nc +"no fo words : "+nw+"no of lines:"+nl);
+	}
+</script>
+</body>
+</html>

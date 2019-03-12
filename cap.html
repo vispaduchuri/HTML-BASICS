@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>capital</title>
+</head>
+
+<body>
+	<center>
+	<h2> select the country to show the capital</h2>
+	<select id="select1" onchange="capital()" style="font-size: 20px;">
+		<option>select country</option>
+		<option>india</option>
+		<option>canada</option>
+	</select>
+
+	<p id="cap" style="font-size: 20px;"> capital is ...</p>
+
+	<img id="cap1" src="h.jpg" width="200" height="200">
+
+
+</center>
+</body>
+<script>
+	function capital()
+	{
+		var a = document.getElementById("select1").value;
+		switch(a)
+		{
+			case "india" : document.getElementById("cap").innerHTML="new delhi";
+							document.getElementById("cap1").setAttribute("src","kiwi.jpg");
+							break;
+
+			case "canada" : document.getElementById("cap").innerHTML="ottawa";
+							document.getElementById("cap1").setAttribute("src","mango.jpg");
+							break;
+		}
+	}
+</script>
+</html>
